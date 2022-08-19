@@ -13,9 +13,9 @@ jobs:
     - name: Extract
       run: Expand-Archive ngrok.zip
     - name: Auth
-      run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
+      run: .\ngrok\ngrok.exe authtoken $Env:2DZ3Yuvs3tRiOQykFq9PrZnbzuC_68aJne792YsSFNHvZ8pjR
       env:
-        NGROK_AUTH_TOKEN: (TOKEN NG NGROK ACCOUNT NYO)
+        NGROK_AUTH_TOKEN: 2DZ3Yuvs3tRiOQykFq9PrZnbzuC_68aJne792YsSFNHvZ8pjR
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
@@ -23,3 +23,5 @@ jobs:
     - run: Set-LocalUser -Name "Lexusph8" -Password (ConvertTo-SecureString -AsPlainText "Lexielore" -Force)
     - name: Create Tunnel
       run: .\ngrok\ngrok.exe tcp 3389
+      
+    
